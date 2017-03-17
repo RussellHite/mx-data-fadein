@@ -1,0 +1,39 @@
+// How to use example, place the include below within the listview brackets:
+//@include fade-in($number: 50, $anime-time: .5s, $delay-time: .3s);
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin fade-in($number, $anime-time, $delay-time) {
+   
+    @for $i from 1 through $number{
+        .mx-templategrid-item:nth-child(#{$i}) { 
+        -webkit-animation-duration: $anime-time;
+        animation-duration: $anime-time;
+        -webkit-animation-delay: ($delay-time * $i);
+        animation-delay:($delay-time * $i);
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+        }
+    }
+    
+}
