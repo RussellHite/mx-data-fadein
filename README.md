@@ -1,6 +1,5 @@
 # mx-data-fadein
 Sass function/mixin that allows you to sequentially animate in listview items
-View icons: https://material.io/icons/
 
 ## Prerequisites
 For easiest implementation of this or any other icon font it is reccomended you install the Vanilla theme when you start to style your applicaton.
